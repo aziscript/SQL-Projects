@@ -1,0 +1,49 @@
+"product_line","month","warehouse","net_revenue"
+Braking system,August,Central,3039.48974609375
+Braking system,August,West,2500.719970703125
+Braking system,August,North,1770.900146484375
+Braking system,July,Central,3778.72998046875
+Braking system,July,West,3060.999755859375
+Braking system,July,North,2594.490234375
+Braking system,June,Central,3684.989990234375
+Braking system,June,North,1487.8099365234375
+Braking system,June,West,1212.77001953125
+Electrical system,August,North,4721.2001953125
+Electrical system,August,Central,3126.47998046875
+Electrical system,August,West,1241.8701171875
+Electrical system,July,Central,5577.72021484375
+Electrical system,July,North,1710.159912109375
+Electrical system,July,West,449.4700012207031
+Electrical system,June,Central,2904.97998046875
+Electrical system,June,North,2022.530029296875
+Engine,August,Central,9528.76953125
+Engine,August,North,2324.199951171875
+Engine,July,Central,1827.0400390625
+Engine,July,North,1007.1500244140625
+Engine,June,Central,6548.8896484375
+Frame & body,August,Central,8658.080078125
+Frame & body,August,North,7898.93994140625
+Frame & body,August,West,829.7000122070312
+Frame & body,July,North,6154.66015625
+Frame & body,July,Central,3135.169921875
+Frame & body,June,Central,5111.39990234375
+Frame & body,June,North,4910.18017578125
+Frame & body,June,West,2779.760009765625
+Miscellaneous,August,North,1841.4400634765625
+Miscellaneous,August,Central,1739.800048828125
+Miscellaneous,August,West,813.4400024414062
+Miscellaneous,July,Central,3118.48974609375
+Miscellaneous,July,North,2404.679931640625
+Miscellaneous,July,West,1156.830078125
+Miscellaneous,June,West,2281.010009765625
+Miscellaneous,June,Central,1878.119873046875
+Miscellaneous,June,North,514.0
+Suspension & traction,August,Central,5416.759765625
+Suspension & traction,August,North,4923.75
+Suspension & traction,August,West,1080.800048828125
+Suspension & traction,July,Central,6456.80029296875
+Suspension & traction,July,North,3714.35009765625
+Suspension & traction,July,West,2939.369873046875
+Suspension & traction,June,North,8065.830078125
+Suspension & traction,June,Central,3325.05029296875
+Suspension & traction,June,West,2372.56005859375
