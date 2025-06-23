@@ -1,0 +1,46 @@
+
+-- TEAM_HOME_WITH_MOST_GOALS        
+SELECT u0."TEAM_NAME_HOME", 
+       u0."TEAM_HOME_SCORE"
+FROM soccer.uefa_2020 u0
+ORDER BY u0."TEAM_HOME_SCORE" DESC 
+LIMIT 3; 
+
+
+-- TEAM_WITH_MAJORITY_POSSESSION
+SELECT
+    CASE 
+		-- Home team name if they had more possession
+		WHEN u1."POSSESSION_HOME" > u1."POSSESSION_AWAY" THEN u1."TEAM_NAME_HOME"
+		-- Away team name if they had more possession
+		WHEN u1."POSSESSION_AWAY" > u1."POSSESSION_HOME" THEN u1."TEAM_NAME_AWAY"
+		ELSE NULL 
+	END AS TEAM_NAME,
+	COUNT(*) AS GAME_COUNT
+FROM soccer.uefa_2021 u1
+GROUP BY TEAM_NAME
+ORDER BY GAME_COUNT DESC
+LIMIT 1;
+
+
+
+-- TEAM_WON_DUEL_LOST_GAME_STAGE_WISE
+WITH duel_lost AS (
+    SELECT 
+        u2."STAGE",
+        CASE
+            WHEN u2."DUELS_WON_HOME" > u2."DUELS_WON_AWAY" 
+              AND u2."TEAM_HOME_SCORE" < u2."TEAM_AWAY_SCORE" 
+            THEN u2."TEAM_NAME_HOME"
+            WHEN u2."DUELS_WON_AWAY" > u2."DUELS_WON_HOME" 
+              AND u2."TEAM_AWAY_SCORE" < u2."TEAM_HOME_SCORE" 
+            THEN u2."TEAM_NAME_AWAY"
+            ELSE NULL
+        END AS TEAM_LOST    
+    FROM soccer.uefa_2022 u2
+)
+SELECT 
+    "STAGE",
+    TEAM_LOST
+FROM duel_lost
+WHERE TEAM_LOST IS NOT NULL;
